@@ -2,7 +2,7 @@
 import React from "react";
 import Snackbar from "@mui/material/Snackbar";
 import Alert from "@mui/material/Alert";
-import { useNotification } from "@/vocab/providers/NotificationProvider";
+import { useNotification } from "@/portfolio/providers/NotificationProvider";
 
 export const Notification = () => {
     const { message, isOpen, setIsOpen, type } = useNotification();
