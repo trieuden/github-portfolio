@@ -12,12 +12,16 @@ const preahvihear = Preahvihear({
     subsets: ["latin"],
     weight: "400",
 });
+type GithubProfile = {
+     avatar_url: string;
+     name: string;
+};
 
 export const HomePage = () => {
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down("md"));
     const { isDarkMode } = useThemeMode();
-    const [gitProfile, setGitProfile] = useState(null);
+    const [gitProfile, setGitProfile] = useState<GithubProfile>();
     const [gitProjects, setGitProjects] = useState([]);
 
     const userData = {
